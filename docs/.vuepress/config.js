@@ -7,6 +7,9 @@ export default defineUserConfig({
     lang: 'zh-CN',
     theme: plumeTheme({
         // more...
+        search: {
+            // more options
+        }
     }),
     bundler: viteBundler(),
 })
