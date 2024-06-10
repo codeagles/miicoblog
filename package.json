@@ -6,7 +6,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "author": "",
+  "author": "miico",
   "license": "ISC",
   "description": "",
   "devDependencies": {
