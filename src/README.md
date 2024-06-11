@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: 指南
+title: 主页
 heroImage: /assets/image/shellV2.png
 bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
@@ -54,6 +54,5 @@ highlights:
   
 
 copyright: false
-footer: <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备14017714号</a> | 辽ICP备14017714号-1 | MIT Licensed | Copyright © 2019 Miico，All rights reserved.
 ---
 
