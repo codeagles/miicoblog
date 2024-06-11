@@ -34,7 +34,7 @@ export default navbar([
       {
         text: "动态线程池",
         icon: "circle-nodes",
-        link: "/component/dynamicthreadpool/README.md",
+        link: "/component/dynamicthreadpool/dynamic_threadpool_01.md",
       },
     ]
   },
