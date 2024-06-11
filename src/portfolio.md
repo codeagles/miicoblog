@@ -5,7 +5,7 @@ title: 档案主页
 icon: info
 welcome: 👋 你好，我是
 name: Miico
-avatar: https://theme-hope-assets.vuejs.press/hero/conan.png
+avatar: /assets/image/person.png
 
 titles:
   - 码海拾贝的旅者
@@ -20,3 +20,5 @@ footer: false
 Hi，我是Miico，这里是我记录技术学习、沉淀与分享的博客。
 
 希望自己在这里可以对设计模式、算法、框架源码、组件开发等方向有更多的探索与沉淀，并记录在此。
+
+折腾技术的同时，不忘生活。兴趣爱好很多，动漫、游戏、摄影、调酒等等，组队来玩吧~
