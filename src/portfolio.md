@@ -2,23 +2,21 @@
 home: true
 portfolio: true
 title: 档案主页
-icon: home
+icon: info
 welcome: 👋 你好，我是
-name: 江户川柯南
+name: Miico
 avatar: https://theme-hope-assets.vuejs.press/hero/conan.png
 
 titles:
-  - 天才少年侦探
-  - 小兰的青梅竹马
-  - 黑衣组织的最大对手
+  - 码海拾贝的旅者
+  - 追求技术便利生活的实践者
+  - 数字工具的优化者
 
 footer: false
 ---
 
 ## 介绍
 
-这是一个档案主页的案例。
+Hi，我是Miico，这里是我记录技术学习、沉淀与分享的博客。
 
-要使用此布局，你应该在页面 Frontmatter 中设置 `home: true` 和 `portfolio: true`。
-
-相关配置文档请见 [档案主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html#档案类型主页)。
+希望自己在这里可以对设计模式、算法、框架源码、组件开发等方向有更多的探索与沉淀，并记录在此。
