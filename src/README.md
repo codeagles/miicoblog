@@ -14,7 +14,7 @@ tagline: “人类最大的利益，就是各种技术。”
 actions:
   - text: 快速开始
     icon: lightbulb
-    link: ./demo/
+    link: ./guide/
     type: primary
 
   - text: Github

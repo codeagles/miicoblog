@@ -16,8 +16,15 @@ export default sidebar({
       text: "框架",
       icon: "fire",
       prefix: "framework/",
-      link: "spring/",
-      children: "structure",
+      children: [
+        {
+          text: "Spring框架",
+          icon: "fire",
+          prefix: "framework/",
+          link: "spring/",
+          children: "structure",
+        }
+      ],
     },
     {
       text: "组件开发",
