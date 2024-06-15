@@ -31,15 +31,20 @@ highlights:
       background-repeat: repeat
       background-size: initial
     features:
+      - title: 全部文章
+        icon: list
+        details: 博客全部文章、分类以及标签
+        link: /article/
+        
       - title: Spring
         icon: leaf
         details: Spring框架、源码解析
-        link: https://theme-hope.vuejs.press/zh/guide/markdown/others.html#link-check
+        link: /framework/spring/
 
       - title: 组件开发
         icon: puzzle-piece
         details: 组件项目造轮子开发
-        link: https://theme-hope.vuejs.press/zh/guide/markdown/stylize/hint.html
+        link: /component/
 
       - title: 算法
         icon: infinity
@@ -50,6 +55,8 @@ highlights:
         icon: book
         details: 推荐的阅读书籍以及电子书
         link: https://theme-hope.vuejs.press/zh/guide/markdown/content/tabs.html
+        
+      
 
   
 

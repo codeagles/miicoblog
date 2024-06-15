@@ -56,6 +56,7 @@ export default hopeTheme({
     //   category: "Announcements",
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
+    blog: true,
     searchPro: true,
     components: {
       components: ["Badge", "VPCard"],
