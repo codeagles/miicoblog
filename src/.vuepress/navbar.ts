@@ -16,12 +16,16 @@ export default navbar([
       {
         text: "Spring",
         icon: "leaf",
-        prefix:"spring/",
         children: [
           {
             text: "Spring系列",
             icon: "leaf",
-            link: "README.md",
+            link: "/framework/spring/README.md",
+          },
+          {
+            text: "SpringBoot系列",
+            icon: "leaf",
+            link: "/framework/springboot/README.md",
           },
         ],
       },

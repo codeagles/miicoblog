@@ -3,6 +3,7 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/component/dynamicthreadpool/": "structure",
   "/framework/spring/": "structure",
+  "/framework/springboot/": "structure",
   "/": [
     "",
     {
@@ -45,6 +46,12 @@ export default sidebar({
       prefix: "book/",
       link: "book/",
       children: "structure",
+    },
+    {
+      text: "工具",
+      icon: "toolbox",
+      prefix: "tools/",
+      link: "tools/",
     },
   ],
 });
