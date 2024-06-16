@@ -16,15 +16,7 @@ export default sidebar({
       text: "框架",
       icon: "fire",
       prefix: "framework/",
-      children: [
-        {
-          text: "Spring框架",
-          icon: "fire",
-          prefix: "framework/",
-          link: "spring/",
-          children: "structure",
-        }
-      ],
+      children: "structure",
     },
     {
       text: "组件开发",
@@ -48,9 +40,11 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
+      text: "推荐书籍",
+      icon: "book",
+      prefix: "book/",
+      link: "book/",
+      children: "structure",
     },
   ],
 });
