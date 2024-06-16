@@ -30,6 +30,7 @@ export default hopeTheme({
   displayFooter: true,
 
   copyright: false,
+  editLink: false,
 
   // 加密配置
   encrypt: {
