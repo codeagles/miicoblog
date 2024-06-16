@@ -1,16 +1,5 @@
 ---
 title: 指南
 icon: compass
+index: false
 ---
-
-## 功能亮点
-
-### Bar
-
-
-- ...
-
-### Foo
-
-
-- ...

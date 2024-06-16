@@ -6,12 +6,12 @@ export default sidebar({
   "/framework/springboot/": "structure",
   "/": [
     "",
-    {
-      text: "指南",
-      icon: "compass",
-      prefix: "guide/",
-      link: "guide/",
-    },
+    // {
+    //   text: "指南",
+    //   icon: "compass",
+    //   prefix: "guide/",
+    //   link: "guide/",
+    // },
     "portfolio",
     {
       text: "框架",
@@ -34,13 +34,6 @@ export default sidebar({
       ],
     },
     {
-      text: "案例",
-      icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
-      children: "structure",
-    },
-    {
       text: "推荐书籍",
       icon: "book",
       prefix: "book/",
@@ -51,7 +44,8 @@ export default sidebar({
       text: "工具",
       icon: "toolbox",
       prefix: "tools/",
-      link: "tools/",
+      link: "/tools/",
+      children: "structure",
     },
   ],
 });
