@@ -1,14 +1,15 @@
 ---
-title: Mac问题合集&解决方案
+title: Mac安装软件显示「文件已损坏」或者安装完打开没有反应
 icon: toolbox
 category:
-  - tool
+  - 工具
 tags:
   - mac
 ---
 ### macOS系统安装完软件后显示「文件已损坏」或者安装完打开没有反应
 因为 软件 没有签名，所以会被 macOS 的安全检查所拦下。
 安装后打开遇到「文件已损坏」的情况，请按如下方式操作：
+<!-- more -->
 1. 信任开发者，会要求输入密码:
 ```bash
 sudo spctl --master-disable
