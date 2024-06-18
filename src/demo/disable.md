@@ -6,6 +6,7 @@ category:
   - 使用指南
 tag:
   - 禁用
+  article: false
 
 navbar: false
 sidebar: false
