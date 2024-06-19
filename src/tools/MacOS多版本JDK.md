@@ -1,16 +1,17 @@
 ---
-title: MacOS多版本JDK、Maven动态关联JDK配置
+title: jenv管理多版本JDK
 icon: toolbox
 category:
-  - tool
+  - 工具
 tags:
   - jdk
   - jenv
   - maven
+  - mac
 ---
-## MacOS多版本JDK、Maven动态关联JDK配置
+## MacOS使用jenv管理多版本JDK、Maven动态关联JDK配置
 
-本文介绍一下，在MacOS下如何管理多版本JDK，以及安装Maven之后如何动态关联生效的JDK。
+本文介绍一下，在MacOS下如何通过jenv管理多版本JDK，以及安装Maven之后如何动态关联生效的JDK。
 
 ### 一、安装环境
 
@@ -31,7 +32,6 @@ brew install jenv
 echo 'export PATH="$HOME/.jenv/bin:$PATH"'>>~/.zshrc
 echo 'eval "$(jenv init -)"' >>~/.zshrc
 ```
-
 安装完成后，可以使用命令`jenv doctor`查看一下是否安装成功。
 
 <img src="http://img.codeagles.com/miicoblog/image-20240617225034793.png" style="zoom:50%;" />

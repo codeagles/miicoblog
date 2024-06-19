@@ -22,7 +22,7 @@ tag:
 #star: true
 # 你可以自定义页脚
 # 你可以自定义版权信息
-
+article: false
 ---
 
 `more` 注释之前的内容被视为文章摘要。
