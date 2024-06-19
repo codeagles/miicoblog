@@ -1,5 +1,5 @@
 ---
-title: SpringBoot实现事件监听
+title: SpringBoot事件监听器实践，实现代码解耦(同步异步)
 icon: leaf
 category:
   - Spring
