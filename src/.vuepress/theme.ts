@@ -10,7 +10,7 @@ export default hopeTheme({
     url: "/portfolio",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: "//at.alicdn.com/t/c/font_4593196_xt33zzyhmx.css",
 
   logo: "/assets/image/shellV2.png",
 
@@ -25,12 +25,13 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">辽ICP备14017714号</a> | 辽ICP备14017714号-1 | MIT Licensed | Copyright © 2019 Miico，All rights reserved.",
+  footer: "<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">辽ICP备14017714号</a> | MIT Licensed | Copyright © 2019 Miico，All rights reserved.",
 
   displayFooter: true,
 
   copyright: false,
   editLink: false,
+  contributors: false,
 
   // 加密配置
   encrypt: {

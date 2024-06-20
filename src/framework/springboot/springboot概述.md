@@ -1,6 +1,5 @@
 ---
-title: 概述
-icon: leaf
+title: SpringBoot概述
 category:
   - Spring
   - SpringBoot

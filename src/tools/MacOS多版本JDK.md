@@ -1,6 +1,5 @@
 ---
 title: jenv管理多版本JDK
-icon: toolbox
 category:
   - 工具
 tags:

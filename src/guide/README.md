@@ -1,5 +1,5 @@
 ---
-title: 指南
+title: 路书总览
 icon: compass
 index: false
 article: false

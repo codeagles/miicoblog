@@ -1,45 +1,31 @@
 import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
-    "",
   {
-    text: "指南",
-    icon: "compass",
+    text: "路书总览",
+    icon: "zhinan",
     link: "/guide/",
   },
-  "/portfolio",
+  { text: "技术书籍", icon: "book", link: "/books/" },
   {
-    text: "框架",
-    icon: "fire",
-    prefix: "/framework/",
-    children: [
-      {
-        text: "Spring",
-        icon: "leaf",
-        children: [
-          {
-            text: "Spring系列",
-            icon: "leaf",
-            link: "/framework/spring/README.md",
-          },
-          {
-            text: "SpringBoot系列",
-            icon: "leaf",
-            link: "/framework/springboot/README.md",
-          },
-        ],
-      },
-    ]
+    text: "开源项目",
+    icon: "jihe",
+    link: "/opensource/"
   },
   {
-    text: "组件开发",
-    icon: "puzzle-piece",
+    text: "关于站点",
+    icon: "guanyu",
     children: [
       {
-        text: "动态线程池",
-        icon: "circle-nodes",
-        link: "/component/dynamicthreadpool/dynamic_threadpool_01.md",
+        text: "关于作者",
+        icon: "guanyu",
+        link: "/portfolio.md",
+      },
+      {
+        text: "动态更新",
+        icon: "lishi",
+        link: "/timeline/",
       },
     ]
-  },
+  }
 ]);

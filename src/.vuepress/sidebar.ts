@@ -5,47 +5,74 @@ export default sidebar({
   "/framework/spring/": "structure",
   "/framework/springboot/": "structure",
   "/": [
-    "",
-    // {
-    //   text: "指南",
-    //   icon: "compass",
-    //   prefix: "guide/",
-    //   link: "guide/",
-    // },
-    "portfolio",
     {
-      text: "框架",
-      icon: "fire",
-      prefix: "framework/",
+      text: "Java",
+      icon: "java",
+      prefix: "java/",
+      collapsible: true,
       children: "structure",
     },
     {
-      text: "组件开发",
-      icon: "fire",
-      prefix: "component/",
+      text: "常用框架",
+      icon: "kuangjiaguanli1",
+      prefix: "framework/",
+      collapsible: true,
       children: [
         {
-          text: "动态线程池",
-          icon: "fire",
-          prefix: "component/",
-          link: "dynamicthreadpool/",
-          children: "structure",
-        }
+          text: "Spring&SpringBoot",
+          prefix: "springboot/",
+          icon: "spring_boot",
+          collapsible: true,
+          children: [
+            {
+              text: "SpringBoot系列",
+              icon: "spring_boot",
+              collapsible: true,
+              children: "structure",
+            }
+          ]
+        },
       ],
     },
     {
-      text: "推荐书籍",
-      icon: "book",
-      prefix: "book/",
-      link: "book/",
+      text: "数据库",
+      icon: "shujuku",
+      prefix: "database/",
+      collapsible: true,
+      children: [
+        {
+          text: "MySQL",
+          prefix: "mysql/",
+          icon: "mysql",
+          children: [
+
+          ]
+        },
+      ],
+    },
+    {
+      text: "组件开发",
+      icon: "zujian",
+      prefix: "component/",
+      collapsible: true,
       children: "structure",
     },
     {
-      text: "工具",
-      icon: "toolbox",
+      text: "开发工具",
+      icon: "gongju-",
       prefix: "tools/",
-      link: "/tools/",
-      children: "structure",
+      collapsible:true,
+      children: [
+        {
+          text: "环境搭建",
+          icon: "mac",
+          collapsible:true,
+          children: [
+              "MacOS多版本JDK.md",
+              "Mac安装软件没有反应.md",
+          ],
+        }
+      ],
     },
   ],
 });

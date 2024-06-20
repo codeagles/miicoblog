@@ -2,7 +2,7 @@
 home: true
 portfolio: true
 title: 档案主页
-icon: info
+icon: guanyu
 welcome: 👋 你好，我是
 name: Miico
 avatar: /assets/image/person.png

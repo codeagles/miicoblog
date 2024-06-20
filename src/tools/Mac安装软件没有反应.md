@@ -1,6 +1,5 @@
 ---
 title: Mac安装软件显示「文件已损坏」或者安装完打开没有反应
-icon: toolbox
 category:
   - 工具
 tags:

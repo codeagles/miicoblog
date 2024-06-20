@@ -1,6 +1,6 @@
 ---
 title: Spring系列
-icon: leaf
+icon: spring_boot
 category:
   - Spring
   - 框架
