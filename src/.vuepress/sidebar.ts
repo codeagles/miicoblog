@@ -22,14 +22,15 @@ export default sidebar({
           prefix: "springboot/",
           icon: "spring_boot",
           collapsible: true,
-          children: [
-            {
-              text: "SpringBoot系列",
-              icon: "spring_boot",
-              collapsible: true,
-              children: "structure",
-            }
-          ]
+          children: "structure",
+          // children: [
+          //   {
+          //     text: "SpringBoot系列",
+          //     icon: "spring_boot",
+          //     collapsible: true,
+          //     children: "structure",
+          //   }
+          // ]
         },
       ],
     },
