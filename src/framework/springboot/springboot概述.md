@@ -7,7 +7,7 @@ category:
 order: 1
 head:
   - - meta
-    - name: SpringBoot
+    - name: keywords
       content: SpringBoot 介绍
 ---
 ## 前言

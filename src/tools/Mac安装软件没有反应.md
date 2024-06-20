@@ -7,7 +7,7 @@ tags:
 
 head:
   - - meta
-    - name: mac软件
+    - name: keywords
       content: 文件已损坏 解决方案
 ---
 ## macOS系统安装完软件后显示「文件已损坏」或者安装完打开没有反应

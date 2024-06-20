@@ -6,7 +6,7 @@ tags:
   - mac软件
 head:
   - - meta
-    - name: MacOS
+    - name: keywords
       content: MacOS 软件 提效 开发者
 ---
 ### MacOS开发者必备的提效软件
