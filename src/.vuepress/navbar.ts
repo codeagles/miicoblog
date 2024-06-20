@@ -6,7 +6,7 @@ export default navbar([
     icon: "zhinan",
     link: "/guide/",
   },
-  { text: "技术书籍", icon: "book", link: "/books/" },
+  { text: "技术书籍", icon: "book1", link: "/book/" },
   {
     text: "开源项目",
     icon: "jihe",

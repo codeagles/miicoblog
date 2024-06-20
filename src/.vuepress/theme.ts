@@ -28,7 +28,8 @@ export default hopeTheme({
   footer: "<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">辽ICP备14017714号</a> | MIT Licensed | Copyright © 2019 Miico，All rights reserved.",
 
   displayFooter: true,
-
+  pure: true,
+  breadcrumb: false,
   copyright: false,
   editLink: false,
   contributors: false,

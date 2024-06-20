@@ -1,9 +1,8 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
-  "/component/dynamicthreadpool/": "structure",
-  "/framework/spring/": "structure",
-  "/framework/springboot/": "structure",
+  "/opensource/": "structure",
+  "/book/": "structure",
   "/": [
     {
       text: "Java",
@@ -30,6 +29,22 @@ export default sidebar({
               collapsible: true,
               children: "structure",
             }
+          ]
+        },
+      ],
+    },
+    {
+      text: "数据结构&算法",
+      icon: "shujuku",
+      prefix: "database/",
+      collapsible: true,
+      children: [
+        {
+          text: "MySQL",
+          prefix: "mysql/",
+          icon: "mysql",
+          children: [
+
           ]
         },
       ],
