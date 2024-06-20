@@ -4,6 +4,11 @@ category:
   - 工具
 tags:
   - mac
+
+head:
+  - - meta
+    - name: mac软件
+      content: 文件已损坏 解决方案
 ---
 ## macOS系统安装完软件后显示「文件已损坏」或者安装完打开没有反应
 因为 软件 没有签名，所以会被 macOS 的安全检查所拦下。

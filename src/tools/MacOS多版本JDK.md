@@ -7,6 +7,10 @@ tags:
   - jenv
   - maven
   - mac
+head:
+   - - meta
+     - name: 多版本JDK
+       content: jenv 多版本 JDK
 ---
 ## MacOS使用jenv管理多版本JDK、Maven动态关联JDK配置
 

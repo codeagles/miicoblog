@@ -5,6 +5,10 @@ category:
   - SpringBoot
   - 框架
 order: 1
+head:
+  - - meta
+    - name: SpringBoot
+      content: SpringBoot 介绍
 ---
 ## 前言
 

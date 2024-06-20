@@ -4,6 +4,10 @@ category:
   - 工具
 tags:
   - mac软件
+head:
+  - - meta
+    - name: MacOS
+      content: MacOS 软件 提效 开发者
 ---
 ### MacOS开发者必备的提效软件
 
