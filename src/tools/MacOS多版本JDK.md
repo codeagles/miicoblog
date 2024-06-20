@@ -33,7 +33,7 @@ echo 'eval "$(jenv init -)"' >>~/.zshrc
 ```
 安装完成后，可以使用命令`jenv doctor`查看一下是否安装成功。
 
-<img src="http://img.codeagles.com/miicoblog/image-20240617225034793.png" style="zoom:50%;" />
+<img src="https://img.shell101.com/miicoblog/image-20240617225034793.png" style="zoom:50%;" />
 
 如果第一行出现报错，没关系是因为系统没有安装JDK导致的。
 
@@ -46,7 +46,7 @@ echo 'eval "$(jenv init -)"' >>~/.zshrc
    brew install java11
    ```
 
-   <img src="http://img.codeagles.com/miicoblog/image-20240617225340031.png" alt="image-20240617225340031" style="zoom:50%;" />
+   <img src="https://img.shell101.com/miicoblog/image-20240617225340031.png" alt="image-20240617225340031" style="zoom:50%;" />
 
 注意：如果是M系列芯片，不支持这种方式安装JDK8，需要自行去Oracle官网下载安装，然后使用JENV进行管理。
 
@@ -58,7 +58,7 @@ echo 'eval "$(jenv init -)"' >>~/.zshrc
    
    ```
 
-   ![image-20240617225847218](http://img.codeagles.com/miicoblog/image-20240617225847218.png)
+   ![image-20240617225847218](https://img.shell101.com/miicoblog/image-20240617225847218.png)
 
 安装完成之后通过命令`mvn -v`查看一下是否安装成功。
 
