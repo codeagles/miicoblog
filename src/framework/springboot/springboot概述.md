@@ -47,25 +47,29 @@ SpringBoot给我们提供了哪些易用的特性呢？
 - spring-boot-project：核心工程目录
 - spring-boot-tests：一些测试相关的工程目录
 
+![image-20240620235427258](https://img.shell101.com/miicoblog/image-20240620235427258.png)
+
 我们的主要关注也是在第二个spring-boot-project目录中，我们再来看看这个目录中的内容。
 
-<img src="https://img.shell101.com/miicoblog/20240616170939.png" style="zoom:50%;" />
+<img src="http://img.codeagles.com/miicoblog/20240616170939.png" style="zoom:50%;" />
 
-看起来内容好像不太多，不过它这里都是有嵌套结构的，我们可以按照gradle定义的编译顺序来大致看看里面都有什么。
+看起来内容好像不太多，不过它这里都是有嵌套结构的，我们可以按照setting.gradle定义的编译顺序来大致看看里面都有什么。
 
-![settings.gradle](https://img.shell101.com/miicoblog/20240616172120.png)
+![settings.gradle](http://img.codeagles.com/miicoblog/20240616172120.png)
 
 比如`spring-boot-dependencies`这个目录中没有源码，只有gradle的一些依赖，我们熟知的有AspectJ相关的，还有一些Commons Lang3，其他的感兴趣的可以自己打开看看。而比较重要的应该算是spring-boot目录了，打开spring-boot中的gradle看看里面还是有很多东西的，代码也很复杂。
 
-![spring-boot的gradle配置](https://img.shell101.com/miicoblog/image-20240616173217426.png)
+![spring-boot-dependencies](https://img.shell101.com/miicoblog/image-20240620235517438.png)
+
+![spring-boot的gradle配置](http://img.codeagles.com/miicoblog/image-20240616173217426.png)
 
 而往下跟着工程目录往下看，能看到一个 spring-boot-starters目录，这个就是我们初始创建工程时接触较多的地方。
 
-![spring-boot-starters](https://img.shell101.com/miicoblog/image-20240616173523434.png)
+![image-20240620235709186](https://img.shell101.com/miicoblog/image-20240620235709186.png)
 
 看到这我们可能都熟悉了，打开spring-boot-starter发现里面只有一个文件，就是build.gradle,里面定义了springboot初始的一些依赖项目。
 
-![starters的gradle配置](https://img.shell101.com/miicoblog/image-20240616173909326.png)顺带在打开比如我们熟悉的 spring-boot-starter-actuator或者spring-boot-starter-aop，里面也都类似，先引用了上面的spring-boot-starter，然后在引入一些自己相关需要的依赖包。到这我想对springboot源码的目录结构就有了一定的了解了。
+![starters的gradle配置](http://img.codeagles.com/miicoblog/image-20240616173909326.png)顺带在打开比如我们熟悉的 spring-boot-starter-actuator或者spring-boot-starter-aop，里面也都类似，先引用了上面的spring-boot-starter，然后在引入一些自己相关需要的依赖包。到这我想对springboot源码的目录结构就有了一定的了解了。
 
 ## 结束
 
