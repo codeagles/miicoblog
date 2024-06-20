@@ -82,10 +82,7 @@ export default sidebar({
           text: "环境搭建",
           icon: "mac",
           collapsible:true,
-          children: [
-              "MacOS多版本JDK.md",
-              "Mac安装软件没有反应.md",
-          ],
+          children:"structure",
         }
       ],
     },

@@ -261,7 +261,8 @@ public class MyCustomEventAnnotationListener {
 
 总的来说，事件系统是一种强大的设计模式，可以在适当的场景下提供很多好处。然而，它们也带来了一些挑战，需要谨慎使用以避免潜在的问题。
 
-
+### 完整代码
+完整代码：[GitHub](https://github.com/codeagles/springboot-demo)
 
 
 
