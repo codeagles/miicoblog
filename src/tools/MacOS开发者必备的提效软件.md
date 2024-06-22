@@ -9,12 +9,8 @@ head:
     - name: keywords
       content: MacOS 软件 提效 开发者
 ---
-### MacOS开发者必备的提效软件
-
-
 ::: tip 工欲善其事必先利其器 
 :::
-
 
 
 ### 1、Homebrew（包管理器）

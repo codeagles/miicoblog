@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: 主页
+#title: 
 heroImage: /assets/image/shellV2.png
 bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg

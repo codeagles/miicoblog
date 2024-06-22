@@ -12,8 +12,6 @@ head:
      - name: keywords
        content: jenv 多版本 JDK
 ---
-## MacOS使用jenv管理多版本JDK、Maven动态关联JDK配置
-
 本文介绍一下，在MacOS下如何通过jenv管理多版本JDK，以及安装Maven之后如何动态关联生效的JDK。
 <!-- more -->
 

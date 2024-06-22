@@ -13,6 +13,7 @@ export default hopeTheme({
   iconAssets: "//at.alicdn.com/t/c/font_4593196_xt33zzyhmx.css",
 
   logo: "/assets/image/shellV2.png",
+  favicon: "/assets/image/favicon.png",
 
   repo: "https://github.com/codeagles",
 

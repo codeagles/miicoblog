@@ -13,7 +13,6 @@ head:
     - name: keywords
       content: SpringBoot 事件监听 Listener Event
 ---
-## SpringBoot事件监听器实践，实现代码解耦(同步异步)
 
 ### 前言
 
