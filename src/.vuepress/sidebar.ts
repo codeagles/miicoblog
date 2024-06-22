@@ -36,14 +36,14 @@ export default sidebar({
     },
     {
       text: "数据结构&算法",
-      icon: "shujuku",
-      prefix: "database/",
+      icon: "suanfamoxing",
+      prefix: "algorithm/",
       collapsible: true,
       children: [
         {
-          text: "MySQL",
-          prefix: "mysql/",
-          icon: "mysql",
+          text: "数据结构",
+          prefix: "/",
+          icon: "yuanma",
           children: [
 
           ]
