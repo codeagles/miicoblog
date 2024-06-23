@@ -9,7 +9,7 @@ export default navbar([
   { text: "技术书籍", icon: "book1", link: "/book/" },
   {
     text: "开源项目",
-    icon: "jihe",
+    icon: "github",
     link: "/opensource/"
   },
   {
