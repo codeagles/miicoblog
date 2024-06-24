@@ -2,6 +2,7 @@
 title: 开源工具
 icon: gongju-
 order: 2
+comment: true
 ---
 ## 开源工具
 ### [Surya](https://github.com/VikParuchuri/surya): 一个文档 OCR 工具包

@@ -59,6 +59,7 @@ export default hopeTheme({
       repoId: "R_kgDOMNXMdg",
       category: "Announcements",
       categoryId: "DIC_kwDOMNXMds4CgVge",
+      comment: false,
     },
     blog: true,
     searchPro: true,

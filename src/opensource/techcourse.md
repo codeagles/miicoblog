@@ -2,6 +2,7 @@
 title: 技术教程
 icon: book
 order: 1
+comment: true
 ---
 
 ## Java
