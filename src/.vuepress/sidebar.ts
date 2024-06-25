@@ -19,15 +19,22 @@ export default sidebar({
       children: [
         {
           text: "Spring&SpringBoot",
-          prefix: "springboot/",
           icon: "spring_boot",
-          collapsible: true,
+          prefix: "springboot/",
           children: "structure",
           // children: [
           //   {
-          //     text: "SpringBoot系列",
+          //     text: "Spring",
+          //     icon: "spring_boot",
+          //     prefix: "spring",
+          //     collapsible: true,
+          //     children: "structure",
+          //   },
+          //   {
+          //     text: "SpringBoot",
           //     icon: "spring_boot",
           //     collapsible: true,
+          //     prefix: "springboot",
           //     children: "structure",
           //   }
           // ]
