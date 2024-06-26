@@ -74,6 +74,38 @@ export default sidebar({
       ],
     },
     {
+      text: "中间件",
+      icon: "suanfamoxing",
+      prefix: "algorithm/",
+      collapsible: true,
+      children: [
+        {
+          text: "Redis",
+          prefix: "/",
+          icon: "yuanma",
+          children: [
+
+          ]
+        },
+      ],
+    },
+    {
+      text: "容器化",
+      icon: "suanfamoxing",
+      prefix: "algorithm/",
+      collapsible: true,
+      children: [
+        {
+          text: "Docker",
+          prefix: "/",
+          icon: "yuanma",
+          children: [
+
+          ]
+        },
+      ],
+    },
+    {
       text: "组件开发",
       icon: "zujian",
       prefix: "component/",
