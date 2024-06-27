@@ -85,4 +85,4 @@ head:
 
 发现在SpringFramework5.x中，@Component是被@Indexed修饰的，这就解释了为什么我们引入了`spring-context-indexer`后，工程中被那5种注解修饰的类，会自动被添加到索引文件`META-INF/spring.components`中了。
 
-到此，我们就已经会用这个注解了。
+到此，我们就已经会用这个注解了。而这个注解的使用还是一些坑的，篇幅问题我们移步下一文，我们来好好剖析一下这个注解的原理和存在的问题。
