@@ -126,5 +126,12 @@ export default sidebar({
         }
       ],
     },
+    {
+      text: "面试专区",
+      icon: "zhinan",
+      prefix: "interview/",
+      collapsible: true,
+      children: "structure",
+    },
   ],
 });
