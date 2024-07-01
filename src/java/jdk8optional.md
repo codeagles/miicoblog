@@ -1,16 +1,22 @@
 ---
-title: JDK8中的Optional取代NULL
+title: JDK8中的Optional取代null
 category:
   - Java
+
+tags:
+  - JDK8
+  - Optional
+
 order: 1
 head:
   - - meta
     - name: keywords
       content: jdk8 Optional
 ---
+
 ### 一、前言
 
-做为一个Java开发者，几乎都被一个异常所折磨过--NullPointerException(NPE)，而吸取Haskell和Scala的灵感，Java8中引入另一个新的类java.util.Optional<T>。Java 8中的Optional是一个可以包含或不可以包含非空值的容器对象，在Stream API中很多地方也都使用到了Optional。我们距离来看看增加这类之后，我们的代码有什么改进，为什么推荐用这个类去做null检测呢？
+做为一个Java开发者，几乎都被一个异常所折磨过--NullPointerException(NPE)，而吸取Haskell和Scala的灵感，Java8中引入另一个新的类`java.util.Optional<T>`。Java 8中的Optional是一个可以包含或不可以包含非空值的容器对象，在Stream API中很多地方也都使用到了Optional。我们距离来看看增加这类之后，我们的代码有什么改进，为什么推荐用这个类去做null检测呢？
 
 现有场景，一个用户在阅读一本书，并且要花钱买这本书来看。我们会很容易得写出这样的代码：
 
@@ -46,7 +52,8 @@ public Object getReadBook(Person person) {
 
 ### 二、初识Optional
 
-Optional类只是对类的简单封装，变量不存在的时候，null值会被创建成一个“空”的Optional对象，并且用Optional.empty();返回。使用Optional语义还会增强代码可读性，比如上述代码Optional<Person>这样就直接告诉了他人person类是可以为缺失的。我们用Optional重写上面的示例。
+Optional类只是对类的简单封装，变量不存在的时候，null值会被创建成一个“空”的Optional对象，并且用Optional.empty()返回。
+使用Optional语义还会增强代码可读性，比如上述代码`Optional<Person>`这样就直接告诉了他人person类是可以为缺失的。我们用Optional重写上面的示例。
 
 ```java
 class Person {
@@ -125,7 +132,8 @@ Optional<String> optionalBookName = bookInfo.map(BookDetail::getBookName);
 
 **可以把Optional对象看成一种特殊的集合，它最多包含一个元素，如果Optional包含一个值，那么函数将该值传递给map进行转换，并应用到 `Optional` 中的值上，返回一个新的 `Optional` 对象。**
 
-> 比如Optional.of("abc"), 则Optional包含了一个值“abc”字符串，然后Optional.of("123").map(String::toUpperCase);把"abc"当做参数传递给map进行转换，最后得到的返回值是一个新的Option<String>对象，对象的值是map函数计算后的结果ABC
+> 比如Optional.of("abc"), 则Optional包含了一个值“abc”字符串，然后Optional.of("123").map(String::toUpperCase);把"abc"当做参数传递给map进行转换，
+> 最后得到的返回值是一个新的`Option<String>`对象，对象的值是map函数计算后的结果ABC
 
 那么，我们会用map怎么改写之前的代码呢？
 
@@ -157,7 +165,8 @@ Optional<String> bookName = Optional.of(person)
         .map(BookDetail::getBookName);
 ```
 
-我们仅需要这样链路下去，就可以得到bookName，当然对于上面代码Book我强制返回了null，而这个代码并不会包空指针异常，而是会返回一个Optional.empty空对象，是不是很方便的消除了null的隐患。当然有人会问，对于【二、初识Optional】中给的代码示例，所有的类都是已经在获取的时候进行了包装，那么用上面的方式是不是也可以。
+我们仅需要这样链路下去，就可以得到bookName，当然对于上面代码Book我强制返回了null，而这个代码并不会包空指针异常，而是会返回一个Optional.empty空对象，是不是很方便的消除了null的隐患。
+当然有人会问，对于【二、初识Optional】中给的代码示例，所有的类都是已经在获取的时候进行了包装，那么用上面的方式是不是也可以。
 
 ```java
 public class Person {
@@ -182,7 +191,9 @@ Optional<String> bookName = Optional.of(person)
         .map(BookDetail::getBookName);
 ```
 
-很抱歉，这段代码编译失败,代码会直接报红，这是因为Optional.of(person)创建了一个Optional的变量，调用了map方法getReadBook获得的是一个Optional<Book>类型的对象，而第二个map相当于操作的是一个Optional<Optional<Book>>的类型。这也是上述所说使用map会生成一个新的optional对象，并包含转换后的值。那怎么解决呢？
+很抱歉，这段代码编译失败,代码会直接报红，这是因为Optional.of(person)创建了一个Optional的变量，
+调用了map方法`getReadBook`获得的是一个`Optional<Book>`类型的对象， 而第二个map相当于操作的是一个`Optional<Optional<Book>>`的类型。
+这也是上述所说使用map会生成一个新的optional对象，并包含转换后的值。那怎么解决呢？
 
 #### 3. 使用flatMap链式获取Optional中的值
 
