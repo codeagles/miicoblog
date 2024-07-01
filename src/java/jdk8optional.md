@@ -8,8 +8,6 @@ head:
     - name: keywords
       content: jdk8 Optional
 ---
-### 
-
 ### 一、前言
 
 做为一个Java开发者，几乎都被一个异常所折磨过--NullPointerException(NPE)，而吸取Haskell和Scala的灵感，Java8中引入另一个新的类java.util.Optional<T>。Java 8中的Optional是一个可以包含或不可以包含非空值的容器对象，在Stream API中很多地方也都使用到了Optional。我们距离来看看增加这类之后，我们的代码有什么改进，为什么推荐用这个类去做null检测呢？
@@ -52,7 +50,7 @@ Optional类只是对类的简单封装，变量不存在的时候，null值会�
 
 ```java
 class Person {
-  private Optional<Book> getReadBook(){};
+  public Optional<Book> getReadBook(){};
 }
 class Book {
  public Optional<BookDetail> getBookInfo(){};
@@ -113,6 +111,7 @@ String bookName = info.getBookName();
 //第一种，Book类没有变，还是普通类
 Optional<BookDetail> bookInfo = Optional.ofNullable(book.getBookInfo());
 Optional<String> optionalBookName = bookInfo.map(BookDetail::getBookName);
+
 //第二种，对Book类进行Optional包装
 public class Book {
     public Optional<BookDetail> getBookInfo() {
@@ -124,4 +123,118 @@ Optional<BookDetail> bookInfo = book.getBookInfo();
 Optional<String> optionalBookName = bookInfo.map(BookDetail::getBookName);
 ```
 
-可以把Optional
+**可以把Optional对象看成一种特殊的集合，它最多包含一个元素，如果Optional包含一个值，那么函数将该值传递给map进行转换，并应用到 `Optional` 中的值上，返回一个新的 `Optional` 对象。**
+
+> 比如Optional.of("abc"), 则Optional包含了一个值“abc”字符串，然后Optional.of("123").map(String::toUpperCase);把"abc"当做参数传递给map进行转换，最后得到的返回值是一个新的Option<String>对象，对象的值是map函数计算后的结果ABC
+
+那么，我们会用map怎么改写之前的代码呢？
+
+```java
+//用户类
+public class Person {
+  public Book getReadBook(){
+      return new Book();
+  };
+}
+//图书类
+public class Book {
+  public BookDetail getBookInfo() {
+      return null;
+  }
+}
+//书籍详情类
+public class BookDetail {
+  private String bookName;
+  BookDetail() {
+      this.bookName = "The Story";
+  }
+}
+//还记得在【前言】中，我们一顿if判断空，防止出现问题，现在学会了Optional和map的用法
+Person person = new Person();
+Optional<String> bookName = Optional.of(person)
+        .map(Person::getReadBook)
+        .map(Book::getBookInfo)
+        .map(BookDetail::getBookName);
+```
+
+我们仅需要这样链路下去，就可以得到bookName，当然对于上面代码Book我强制返回了null，而这个代码并不会包空指针异常，而是会返回一个Optional.empty空对象，是不是很方便的消除了null的隐患。当然有人会问，对于【二、初识Optional】中给的代码示例，所有的类都是已经在获取的时候进行了包装，那么用上面的方式是不是也可以。
+
+```java
+public class Person {
+    public Optional<Book> getReadBook(){
+        return Optional.of(new Book());
+    };
+}
+public class Book {
+    public Optional<BookDetail> getBookInfo() {
+        return Optional.of(new BookDetail());
+    }
+}
+class BookDetail {
+  private String bookName;
+  private String getBookName();
+}
+//调用
+Person person = new Person();
+Optional<String> bookName = Optional.of(person)
+        .map(Person::getReadBook)
+        .map(Book::getBookInfo)
+        .map(BookDetail::getBookName);
+```
+
+很抱歉，这段代码编译失败,代码会直接报红，这是因为Optional.of(person)创建了一个Optional的变量，调用了map方法getReadBook获得的是一个Optional<Book>类型的对象，而第二个map相当于操作的是一个Optional<Optional<Book>>的类型。这也是上述所说使用map会生成一个新的optional对象，并包含转换后的值。那怎么解决呢？
+
+#### 3. 使用flatMap链式获取Optional中的值
+
+上述代码改写成这样，就可以通过编译并且成功运行了。`flatMap` 方法也用于对 `Optional` 中的值进行转换，但是不同于map的是，flatMap最终返回一个合并或者扁平化的一个单一的Optional对象。
+
+```java
+Person person = new Person();
+Optional<String> bookName = Optional.of(person)
+        .flatMap(Person::getReadBook)
+        .flatMap(Book::getBookInfo)
+        .map(BookDetail::getBookName);
+```
+
+对于map和flatMap有了简单了解之后，是不是还有点晕，不知道什么时候用什么？
+
+总结：
+
+- 如果是返回的非Optional类型的值，且不涉及嵌套的话，用map
+- 如果是返回Optional类型的值，且有多重嵌套的，使用flatMap
+
+### 三、Optional API使用
+
+| 方法        | 描述                                                         |
+| ----------- | ------------------------------------------------------------ |
+| empty       | 返回一个空的Optional实例                                     |
+| filter      | 如果值存在且满足提供的谓词，就返回包含该值的optional对象，否则返回一个空的optional对象 |
+| flatMap     | 如果值存在，就对该值执行提供的 mapping 函数调用，返回一个 optional 类型的值，否则就返回一个空的 Optional对象 |
+| get         | 如果值存在，就将被 optional 封装的值返回，否则拋出一个 NosuchBlementException 异常 |
+| ifPresent   | 如果值存在，就执行使用该值的方法调用，否则什么也不做         |
+| isPresent   | 如果值存在就返回 true，否则返回 false                        |
+| map         | 如果值存在，就对该值执行提供的 mapping 函数调用              |
+| of          | 将指定值用Optional 封装之后返回，如果该值为 null，则抛出一个 NullPointerException异常 |
+| ofNullable  | 将指定值用optional 封装之后返回，如果该值为 null，则返回一个空的Optional 对象 |
+| orElse      | 如果有值则将其返回，否则返回一个默认值                       |
+| orElseGet   | 如果有值则将其返回，否则返回一个由指定的 Supplier 接口生成的值 |
+| orElseThrow | 如果有值则将其返回，否则抛出一个由指定的 Supplier 接口生成的异常 |
+
+#### 示例
+
+
+
+#### 测试
+
+
+
+
+
+
+
+
+
+
+
+
+
