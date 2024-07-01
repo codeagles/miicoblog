@@ -50,7 +50,7 @@ export default sidebar({
         {
           text: "数据结构",
           prefix: "/",
-          icon: "yuanma",
+          icon: "suanfamoxing",
           children: [
 
           ]
@@ -75,14 +75,14 @@ export default sidebar({
     },
     {
       text: "中间件",
-      icon: "suanfamoxing",
+      icon: "middleware",
       prefix: "algorithm/",
       collapsible: true,
       children: [
         {
           text: "Redis",
           prefix: "/",
-          icon: "yuanma",
+          icon: "redis",
           children: [
 
           ]
@@ -98,7 +98,7 @@ export default sidebar({
         {
           text: "Docker",
           prefix: "/",
-          icon: "yuanma",
+          icon: "docker",
           children: [
 
           ]
@@ -128,7 +128,7 @@ export default sidebar({
     },
     {
       text: "面试专区",
-      icon: "zhinan",
+      icon: "interview",
       prefix: "interview/",
       collapsible: true,
       children: "structure",
