@@ -14,11 +14,12 @@ head:
       content: jdk8 Optional
 ---
 
-### 一、前言
+## 一、前言
 
-上一篇，我们介绍了Optional能做的事情，以及一些API的使用方式，比如创建Optional的三种方式，map和flatMap的区别和使用场景等等，本文我们来看看如何使用Optional的API。
+上一篇，我们介绍了Optional能做的事情，以及一些API的使用方式，比如创建Optional的三种方式，map和flatMap的区别和使用场景等等，
+本文我们来看看如何使用Optional的API。
 
-### 二、Optional API
+## 二、Optional API
 
 | 方法        | 描述                                                                   |
 | ----------- |----------------------------------------------------------------------|
@@ -36,11 +37,11 @@ head:
 | orElseThrow | 如果有值则将其返回，否则抛出一个由指定的 Supplier 接口生成的异常                                |
 
 
-### 三、Optional API使用示例
+## 三、Optional API使用示例
 > 示例采用isPresent来判断断言是否成立，isPresent表示如果值存在就返回 true，否则返回 false
 
-### 1. 创建的三种方式
-#### 1.1 通过empty()方法创建一个空的对象
+## 1. 创建的三种方式
+### 1.1 通过empty()方法创建一个空的对象
 ```java
     @Test
     public void testEmpty() {
@@ -48,7 +49,7 @@ head:
         assertFalse(empty.isPresent());
     }
 ```
-####  1.2 通过of创建一个非空Optional对象
+###  1.2 通过of创建一个非空Optional对象
 对于name为null的情况，依然会抛出空指针异常，第二个title创建正常。
 ```java
     @Test
@@ -62,7 +63,7 @@ head:
         assertTrue(titleOpt.isPresent());
     }
 ```
-####  1.3 通过ofNullable创建任意值Optional对象
+###  1.3 通过ofNullable创建任意值Optional对象
 ```java
     @Test
     public void testCreateOptionalOfNullable() {
@@ -76,8 +77,8 @@ head:
     }
 ```
 
-### 2. 带有默认值的方法 
-#### 2.1 通过orElse创建带有默认值的Optional对象
+## 2. 带有默认值的方法 
+### 2.1 通过orElse创建带有默认值的Optional对象
 ```java
 @Test
     public void testCreateOptionalOrElse() {
@@ -88,7 +89,7 @@ head:
 ```
 如果存在，则返回“success”，如果name不存在，则给默认值“default”。
 
-####  2.2 通过orElseGet创建带有默认值的Optional对象
+###  2.2 通过orElseGet创建带有默认值的Optional对象
 ```java
 @Test
     public void testCreateOptionalOrElseGet() {
@@ -100,7 +101,7 @@ head:
 如果存在，则返回“success”，如果name不存在，则执行 Supplier 接口生成默认值“default”。
 那么这二者有什么区别呢？看起来都一样啊。我们来进一步测试
 
-#### 2.3 orElseGet与orElse的区别
+### 2.3 orElseGet与orElse的区别
 我们来看一段代码
 ```java
     @Test
@@ -148,7 +149,7 @@ head:
 **orElse：不管包装值是否存在，都会执行orElse中的内容**
 **orElseGet：如果包装值存在，则不会执行orElseGet的内容，只有缺失的情况下才会执行orElseGet**
 
-#### 2.4 通过orElseThrow创建缺失包装值抛出自定义异常
+### 2.4 通过orElseThrow创建缺失包装值抛出自定义异常
 ```java
     @Test
     public void testCreateOptionalOrElseThrow() {
@@ -160,8 +161,8 @@ head:
         assertEquals("success", empty);
     }
 ```
-### 3. 操作Optional
-#### 3.1  使用get获取Optional对象
+## 3. 操作Optional
+### 3.1  使用get获取Optional对象
 ```java
     @Test
     public void testCreateOptionalGet() {
@@ -173,7 +174,7 @@ head:
 ```
 get只能在包装对象不为 null 时返回值，否则它会抛出java.util.NoSuchElementException: No value present异常，我们在上一问也提到过。
 
-#### 3.2 使用filter进行值过滤
+### 3.2 使用filter进行值过滤
 我们业务开发中很常见，比如一个实体有一个状态码，要根据状态码的范围或者几个值来决定执行什么业务逻辑。比如：
 ```java
     //获取状态
@@ -220,7 +221,7 @@ public boolean getBookStatusV2(Book book) {
 这样是不是优雅了许多，如果存在符合条谓词的条件则返回Optional对象，并利用isPresent来判断是否存在值，存在则返回true，如果不符合谓词条件，则会返回一个空的Optional对象，isPresent判断后为false。
 
 在上一文，我们已经对map和flatMap有一个初步的认识，以及它们间的区别。不过代码示例可能有些绕，我们再来几个简单的示例加深一下这两个方法的使用。
-#### 3.3 使用map进行值转换
+### 3.3 使用map进行值转换
 对一个list计算一下元素数量
 ```java
     @Test
@@ -245,8 +246,9 @@ public boolean getBookStatusV2(Book book) {
     }
 ```
 
-#### 3.4 使用flatMap进行值转换
-使用flatMap不同之处在于，map 仅在解包时才转换值，而 flatMap 采用已包装的值并在转换之前解包。就是我们上一文中说的map会出现嵌套Optional<Optional<String>>的情况。
+### 3.4 使用flatMap进行值转换
+使用flatMap不同之处在于，map 仅在解包时才转换值，而 flatMap 采用已包装的值并在转换之前解包。
+就是我们上一文中说的map会出现嵌套`Optional<Optional<String>>`的情况。
 ```java
 @Test
     public void testCreateOptionalFlatMap() {
