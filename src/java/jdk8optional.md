@@ -1,5 +1,5 @@
 ---
-title: JDK8中的Optional取代null
+title: Java8的中的Optional取代null
 category:
   - Java
 
@@ -80,13 +80,14 @@ class BookDetail {
 Optional<Person> optPerson = Optional.empty();
 ```
 
-1.2 根据值创建非空Optional对象
+1.2 创建非空Optional对象
 
 ```java
+//如果person为null依然会抛出异常
 Optional<Person> optPerson = Optional.of(person);
 ```
 
-1.3 创建可接受null值的Optional对象
+1.3 创建任意值的Optional对象
 
 ```java
 Optional<Person> optPerson = Optional.ofNullable(person);
@@ -213,29 +214,6 @@ Optional<String> bookName = Optional.of(person)
 
 - 如果是返回的非Optional类型的值，且不涉及嵌套的话，用map
 - 如果是返回Optional类型的值，且有多重嵌套的，使用flatMap
-
-### 三、Optional API使用
-
-| 方法        | 描述                                                         |
-| ----------- | ------------------------------------------------------------ |
-| empty       | 返回一个空的Optional实例                                     |
-| filter      | 如果值存在且满足提供的谓词，就返回包含该值的optional对象，否则返回一个空的optional对象 |
-| flatMap     | 如果值存在，就对该值执行提供的 mapping 函数调用，返回一个 optional 类型的值，否则就返回一个空的 Optional对象 |
-| get         | 如果值存在，就将被 optional 封装的值返回，否则拋出一个 NosuchBlementException 异常 |
-| ifPresent   | 如果值存在，就执行使用该值的方法调用，否则什么也不做         |
-| isPresent   | 如果值存在就返回 true，否则返回 false                        |
-| map         | 如果值存在，就对该值执行提供的 mapping 函数调用              |
-| of          | 将指定值用Optional 封装之后返回，如果该值为 null，则抛出一个 NullPointerException异常 |
-| ofNullable  | 将指定值用optional 封装之后返回，如果该值为 null，则返回一个空的Optional 对象 |
-| orElse      | 如果有值则将其返回，否则返回一个默认值                       |
-| orElseGet   | 如果有值则将其返回，否则返回一个由指定的 Supplier 接口生成的值 |
-| orElseThrow | 如果有值则将其返回，否则抛出一个由指定的 Supplier 接口生成的异常 |
-
-#### 示例
-
-
-
-#### 测试
 
 
 
