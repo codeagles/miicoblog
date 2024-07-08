@@ -21,6 +21,7 @@ export default sidebar({
           text: "Spring&SpringBoot",
           icon: "spring_boot",
           prefix: "springboot/",
+          collapsible: true,
           children: "structure",
           // children: [
           //   {
