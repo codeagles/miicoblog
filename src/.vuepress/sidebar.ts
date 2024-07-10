@@ -59,29 +59,13 @@ export default sidebar({
       ],
     },
     {
-      text: "数据结构&算法",
-      icon: "suanfamoxing",
-      prefix: "algorithm/",
-      collapsible: true,
-      children: [
-        {
-          text: "数据结构",
-          prefix: "/",
-          icon: "suanfamoxing",
-          children: [
-
-          ]
-        },
-      ],
-    },
-    {
       text: "分布式&微服务",
-      icon: "icon-fenbushi",
+      icon: "fenbushi",
       prefix: "fenbushi/",
       collapsible: true,
       children: [
         {
-          text: "MySQL",
+          text: "分布式",
           prefix: "mysql/",
           icon: "mysql",
           children: [
