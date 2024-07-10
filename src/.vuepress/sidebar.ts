@@ -59,9 +59,25 @@ export default sidebar({
       ],
     },
     {
-      text: "数据库",
-      icon: "shujuku",
-      prefix: "database/",
+      text: "数据结构&算法",
+      icon: "suanfamoxing",
+      prefix: "algorithm/",
+      collapsible: true,
+      children: [
+        {
+          text: "数据结构",
+          prefix: "/",
+          icon: "suanfamoxing",
+          children: [
+
+          ]
+        },
+      ],
+    },
+    {
+      text: "分布式&微服务",
+      icon: "icon-fenbushi",
+      prefix: "fenbushi/",
       collapsible: true,
       children: [
         {

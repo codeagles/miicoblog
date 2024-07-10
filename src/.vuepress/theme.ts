@@ -10,7 +10,7 @@ export default hopeTheme({
     url: "/portfolio",
   },
 
-  iconAssets: "//at.alicdn.com/t/c/font_4593196_izdpqzxo5y.css",
+  iconAssets: "//at.alicdn.com/t/c/font_4593196_2bgoemygonj.css",
 
   logo: "/assets/image/shellV2.png",
   favicon: "/assets/image/favicon.png",
