@@ -67,7 +67,6 @@ export default sidebar({
         {
           text: "分布式",
           prefix: "mysql/",
-          icon: "mysql",
           children: [
 
           ]
