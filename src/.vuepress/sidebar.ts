@@ -40,6 +40,13 @@ export default sidebar({
           //   }
           // ]
         },
+        {
+          text: "SpringBoot拆解系列",
+          icon: "xingxing",
+          prefix: "springboot_series/",
+          collapsible: true,
+          children: "structure",
+        }
       ],
     },
     {
