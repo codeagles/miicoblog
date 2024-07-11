@@ -123,13 +123,6 @@ export default sidebar({
       ],
     },
     {
-      text: "组件开发",
-      icon: "zujian",
-      prefix: "component/",
-      collapsible: true,
-      children: "structure",
-    },
-    {
       text: "开发工具",
       icon: "gongju-",
       prefix: "tools/",
@@ -138,7 +131,7 @@ export default sidebar({
         {
           text: "环境搭建",
           icon: "mac",
-          collapsible:true,
+          // collapsible:true,
           children:"structure",
         }
       ],
