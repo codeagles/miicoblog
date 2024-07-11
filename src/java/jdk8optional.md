@@ -25,7 +25,7 @@ public Object getReadBook(Person person) {
   Book book = person.getReadBook();
 }
 ```
-
+<!-- more -->
 此时person可能为空，一般person是查库或者从其他方法传递过来的，如果person不存在，那么getReadBook()方法就会报错NPE。那么我们改进一下。
 
 ```java

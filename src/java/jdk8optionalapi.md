@@ -18,7 +18,7 @@ head:
 
 上一篇，我们介绍了Optional能做的事情，以及一些API的使用方式，比如创建Optional的三种方式，map和flatMap的区别和使用场景等等，
 本文我们来看看如何使用Optional的API。
-
+<!-- more -->
 ## 二、Optional API
 
 | 方法        | 描述                                                                   |
