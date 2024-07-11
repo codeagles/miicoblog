@@ -75,6 +75,15 @@ export default sidebar({
       ],
     },
     {
+      text: "设计模式",
+      icon: "shejiyishu",
+      prefix: "designpattern/",
+      collapsible: true,
+      children: [
+
+      ],
+    },
+    {
       text: "中间件",
       icon: "middleware",
       prefix: "algorithm/",
