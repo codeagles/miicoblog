@@ -6,7 +6,7 @@ export default sidebar({
   "/": [
     {
       text: "Java",
-      icon: "java",
+      icon: "java1",
       prefix: "java/",
       collapsible: true,
       children: "structure",
