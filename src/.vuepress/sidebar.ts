@@ -83,7 +83,7 @@ export default sidebar({
         {
           text: "Redis",
           prefix: "/",
-          icon: "redis",
+          icon: "redis1",
           children: [
 
           ]
