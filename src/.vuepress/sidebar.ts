@@ -60,13 +60,14 @@ export default sidebar({
     },
     {
       text: "分布式&微服务",
-      icon: "fenbushi",
+      icon: "1-2-1-fenbushi",
       prefix: "fenbushi/",
       collapsible: true,
       children: [
         {
-          text: "分布式",
-          prefix: "mysql/",
+          text: "分布式锁",
+          prefix: "lock/",
+          icon: "lock-fill",
           children: [
 
           ]
