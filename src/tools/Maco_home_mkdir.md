@@ -45,7 +45,7 @@ mkdir /home/test
 
 3. 部分目录是MacOS的系统目录，升级或者修复系统等都会抹除该目录的内容，所以必须要使用的话，可以创建软连接来存储数据
 ```bash
-sudo ln -s /Users/xxx/test/ /home/test/
+sudo ln -s /home/test/ /Users/xxx/test/ 
 (xxx是电脑用户名字，路径也可以自己定义)
 ```
 操作此目录依然要使用sudo提权，如果想让当前用户对文件夹有操作权限，可以给当前用户赋权,就算使用也建议不要给home文件夹最高权限，
