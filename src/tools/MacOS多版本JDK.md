@@ -1,5 +1,5 @@
 ---
-title: jenv管理多版本JDK
+title: 2. jenv管理多版本JDK
 category:
   - 工具
 tags:
