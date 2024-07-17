@@ -13,8 +13,6 @@ head:
 MacOS如何在home目录下创建文件夹？
 <!-- more -->
 
-### 一、安装环境
-
 1. 修改auto_master文件
 编辑/etc/auto_master文件，并注释掉 /home 开头那一行
 
