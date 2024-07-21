@@ -86,9 +86,7 @@ export default sidebar({
       icon: "shejiyishu",
       prefix: "designpattern/",
       collapsible: true,
-      children: [
-
-      ],
+      children: "structure",
     },
     {
       text: "中间件",
